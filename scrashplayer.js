@@ -41,13 +41,23 @@ class Player {
 	        	opcode: 'commentC',
 	        	text: 'Run Player'
 	        },
+		{
+	        	blockType: 'event',
+	        	opcode: 'whenPlayerRuns',
+	        	text: 'When Player Runs',
+			isEdgeActivated: false
+	        },
 	      	
 	    	]
 	    }
 	}
 
+	whenPlayerRuns() {
+		
+	}
+	
 	commentC() {
-
+		this.runtime.startHats(`math_whenPlayerRuns`);
     	}
 	
 }
