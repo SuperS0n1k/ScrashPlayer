@@ -37,21 +37,19 @@ class Player {
 	    	blocks: [
                 
 	        {
-	        	blockType: 'conditional',
+	        	blockType: 'command',
 	        	opcode: 'commentC',
-	        	text: ' ',
-                arguments: {
-
-                },
+	        	text: 'Run Player'
 	        },
 	      	
 	    	]
 	    }
 	}
 
-	commentC(util) {
-      return true;
-    }
+	commentC() {
+
+    	}
+	
 }
 
 // ============== globalize vm and load extension ===============
