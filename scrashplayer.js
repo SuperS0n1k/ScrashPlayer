@@ -57,6 +57,8 @@ class Player {
 	    	name: "Player",
             blockIconURI: icon,
 			menuIconURI: icon,
+            color1:"#f44336",
+            color2:"#ca2b2b",
 	    	blocks: [
                 
 	        {
