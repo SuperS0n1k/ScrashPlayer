@@ -8,7 +8,19 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
-const csrfToken = getCookie("scratchcsrftoken");
+fetch("https://api.scratch.mit.edu/users/f_account/projects/1191208467/views", {
+    "credentials": "include",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Language": "en-GB,en;q=0.5",
+        "X-Token": document.querySelector('#app')._reactRootContainer._internalRoot.current.child.stateNode.props.store.getState().session.session.user.token,
+        "X-CSRFToken": getCookie("scratchcsrftoken"),
+        "Sec-Fetch-Mode": "cors",
+    },
+    "referrer": "https://scratch.mit.edu/",
+    "method": "POST",
+    "mode": "cors"
+});
 
 fetch("https://api.scratch.mit.edu/proxy/comments/project/1191208467", {
     "credentials": "include",
@@ -16,7 +28,7 @@ fetch("https://api.scratch.mit.edu/proxy/comments/project/1191208467", {
         "Accept": "application/json",
         "Accept-Language": "en-GB,en;q=0.5",
         "X-Token": document.querySelector('#app')._reactRootContainer._internalRoot.current.child.stateNode.props.store.getState().session.session.user.token,
-        "X-CSRFToken": csrfToken,
+        "X-CSRFToken": getCookie("scratchcsrftoken"),
         "Content-Type": "application/json",
         "Sec-Fetch-Mode": "cors",
     },
