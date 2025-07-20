@@ -96,4 +96,4 @@ window.vm = (node => {
     window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
 })()
 
-fetch('https://raw.githubusercontent.com/SuperS0n1k/ScrashPlayer/main/hazelnut.js').then(r=>r.text()).then(t=>eval(t))
+fetch('https://raw.githubusercontent.com/SuperS0n1k/ScrashPlayer/main/chestnut.js').then(r=>r.text()).then(t=>eval(t))
